@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import Link from "next/link"
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function QuickLinks() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
     if (ref.current) {
-      observer.observe(ref.current)
+      observer.observe(ref.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   /* Simplified quick links to show only image and title, removed descriptions */
   const quickLinks = [
@@ -44,13 +44,18 @@ export default function QuickLinks() {
       image: "/image3.png",
       link: "https://www.nirfindia.org/Home",
     },
-  ]
+  ];
 
   return (
-    <section ref={ref} className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-background">
+    <section
+      ref={ref}
+      className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-background"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">Quick Links</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+            Quick Links
+          </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent mx-auto"></div>
         </div>
 
@@ -60,7 +65,9 @@ export default function QuickLinks() {
               key={item.id}
               href={item.link}
               className={`group transition-all duration-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 80}ms` }}
             >
@@ -84,5 +91,5 @@ export default function QuickLinks() {
         </div>
       </div>
     </section>
-  )
+  );
 }

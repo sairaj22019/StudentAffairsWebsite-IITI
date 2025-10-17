@@ -8,8 +8,7 @@ const organisationMembers = [
     id: 1,
     name: "Professor Amod C. Umarikar",
     designation: "Dean, Student Affairs",
-    image:
-      "/person1.jpg",
+    image: "/person1.jpg",
     email: "dean_sa@iiti.ac.in",
     phone: "+91-XXXX-XXXXXX",
   },
@@ -17,8 +16,7 @@ const organisationMembers = [
     id: 2,
     name: "Dr. Jayaprakash Murugesan",
     designation: "Associate Dean-I, Student Affairs",
-    image:
-      "/person2.jpeg",
+    image: "/person2.jpeg",
     email: "adean1_sa@iiti.ac.in",
     phone: "+91-XXXX-XXXXXX",
   },
@@ -26,8 +24,7 @@ const organisationMembers = [
     id: 3,
     name: "Dr. Abhijeet Joshi",
     designation: "Associate Dean-II, Student Affairs",
-    image:
-      "/person3.jpeg",
+    image: "/person3.jpeg",
     email: "adean2_sa@iiti.ac.in",
     phone: "+91-XXXX-XXXXXX",
   },
@@ -35,8 +32,7 @@ const organisationMembers = [
     id: 4,
     name: "Cdr. Sunil Kumar (Retd.)",
     designation: "Joint Registrar, Student Affairs",
-    image:
-      "/person4.jpg",
+    image: "/person4.jpg",
     email: "jr_sa@iiti.ac.in",
     phone: "+91-XXXX-XXXXXX",
   },
@@ -44,14 +40,14 @@ const organisationMembers = [
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex-1 bg-background">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-[#003DA5] to-[#0052cc] py-12 px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-r from-[#003DA5] to-[#0052cc] py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 animate-fade-in-up">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 animate-fade-in-up">
             STUDENT AFFAIRS OFFICE
           </h1>
-          <p className="text-blue-100 text-sm sm:text-base animate-fade-in-up">
+          <p className="text-blue-100 text-xs sm:text-sm md:text-base animate-fade-in-up">
             Meet the dedicated team committed to student welfare and development
           </p>
         </div>
@@ -76,22 +72,22 @@ const page = () => {
               </div>
 
               {/* Content Container */}
-              <div className="p-5 text-center border-t-4 border-[#003DA5]">
-                <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-2">
+              <div className="p-4 sm:p-5 text-center border-t-4 border-[#003DA5]">
+                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2 line-clamp-2">
                   {member.name}
                 </h3>
-                <p className="text-sm text-[#003DA5] font-semibold mb-4 line-clamp-2">
+                <p className="text-xs sm:text-sm text-[#003DA5] font-semibold mb-3 sm:mb-4 line-clamp-2">
                   {member.designation}
                 </p>
 
                 {/* Contact Info */}
-                <div className="space-y-2 pt-4 border-t border-gray-100">
+                <div className="space-y-2 pt-3 sm:pt-4 border-t border-gray-100">
                   <div className="flex items-center justify-center gap-2 text-xs text-gray-600 hover:text-[#003DA5] transition-colors">
-                    <Mail size={14} />
+                    <Mail size={14} className="flex-shrink-0" />
                     <span className="truncate">{member.email}</span>
                   </div>
                   <div className="flex items-center justify-center gap-2 text-xs text-gray-600 hover:text-[#003DA5] transition-colors">
-                    <Phone size={14} />
+                    <Phone size={14} className="flex-shrink-0" />
                     <span>{member.phone}</span>
                   </div>
                 </div>
