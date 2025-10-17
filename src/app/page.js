@@ -9,7 +9,6 @@ import Footer from "@/components/footer"
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
       <div className="flex flex-col lg:flex-row gap-0 md:gap-4 px-4 sm:px-6 lg:px-8 py-6 md:py-8 max-w-7xl mx-auto">
         <div className="w-full lg:w-1/2">
           <Carousel />
@@ -19,7 +18,6 @@ export default function Home() {
         </div>
       </div>
       <QuickLinks />
-      <Footer />
     </main>
   )
 }
