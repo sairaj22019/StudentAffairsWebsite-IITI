@@ -27,7 +27,7 @@ const page = () => {
 
           {/* Description */}
           <p className="text-base sm:text-lg text-gray-600 mb-8">
-            This page is currently under development. We're working hard to
+            This page is currently under development. We&apos;re working hard to
             bring you exciting content about our science and technology
             activities, projects, and innovations.
           </p>
