@@ -1,10 +1,8 @@
-"use client"
+"use client";
 
-import Navbar from "@/components/navbar"
-import Carousel from "@/components/carousel"
-import AboutUs from "@/components/about-us"
-import QuickLinks from "@/components/quick-links"
-import Footer from "@/components/footer"
+import Carousel from "@/components/carousel";
+import AboutUs from "@/components/about-us";
+import QuickLinks from "@/components/quick-links";
 
 export default function Home() {
   return (
@@ -19,5 +17,5 @@ export default function Home() {
       </div>
       <QuickLinks />
     </main>
-  )
+  );
 }
