@@ -9,43 +9,43 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null)
 
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "Organisation", href: "#" },
-    { label: "EBSB", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "Organisation", href: "/organisation" },
+    { label: "EBSB", href: "http://ebsb.iiti.ac.in/" },
     {
       label: "Gymkhana",
       href: "#",
       submenu: [
-        { label: "IIT Indore Gymkhana", href: "#" },
-        { label: "Gymkhana Constitution", href: "#" },
-        { label: "Student Gymkhana Election", href: "#" },
+        { label: "IIT Indore Gymkhana", href: "https://gymkhana.iiti.ac.in/" },
+        { label: "Gymkhana Constitution", href: "/not-found" },
+        { label: "Student Gymkhana Election", href: "https://gymkhanaelection.iiti.ac.in/" },
       ],
     },
     {
       label: "Committees",
       href: "#",
       submenu: [
-        { label: "Cultural Committee", href: "#" },
-        { label: "Science and Technology Committee", href: "#" },
-        { label: "Sports Committee", href: "#" },
+        { label: "Cultural Committee", href: "/cultural" },
+        { label: "Science and Technology Committee", href: "/science" },
+        { label: "Sports Committee", href: "/sports" },
       ],
     },
-    { label: "Sports", href: "#" },
+    { label: "Sports", href: "https://people.iiti.ac.in/~sports/" },
     {
       label: "Best All Rounder Performance",
       href: "#",
       submenu: [
-        { label: "Nomination Form for Best All Rounder", href: "#" },
-        { label: "Information for Submission", href: "#" },
+        { label: "Nomination Form for Best All Rounder", href: "/bestAllRounder2024Nom.pdf" },
+        { label: "Information for Submission", href: "/infoSubNom.pdf" },
       ],
     },
     {
       label: "Insurance",
       href: "#",
       submenu: [
-        { label: "Details of Students", href: "#" },
-        { label: "Student List", href: "#" },
-        { label: "IIT Indore Empanelled Hospitals", href: "#" },
+        { label: "Details of Students", href: "/details_ghi.pdf" },
+        { label: "Student List", href: "/studentList.pdf" },
+        { label: "IIT Indore Empanelled Hospitals", href: "/healthClaims" },
       ],
     },
   ]
@@ -75,13 +75,22 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
-                <button
-                  onClick={() => item.submenu && toggleDropdown(item.label)}
-                  className="text-gray-700 hover:text-[#003DA5] font-medium transition-colors duration-300 px-3 py-2 text-sm flex items-center gap-1 rounded-lg hover:bg-blue-50"
-                >
-                  {item.label}
-                  {item.submenu && <ChevronDown size={16} className="group-hover:rotate-180 transition-transform" />}
-                </button>
+                {item.submenu ? (
+                  <button
+                    onClick={() => toggleDropdown(item.label)}
+                    className="text-gray-700 hover:text-[#003DA5] font-medium transition-colors duration-300 px-3 py-2 text-sm flex items-center gap-1 rounded-lg hover:bg-blue-50"
+                  >
+                    {item.label}
+                    <ChevronDown size={16} className="group-hover:rotate-180 transition-transform" />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-gray-700 hover:text-[#003DA5] font-medium transition-colors duration-300 px-3 py-2 text-sm flex items-center gap-1 rounded-lg hover:bg-blue-50"
+                  >
+                    {item.label}
+                  </Link>
+                )}
 
                 {/* Desktop Dropdown */}
                 {item.submenu && (
@@ -115,18 +124,26 @@ export default function Navbar() {
           <div className="lg:hidden pb-4 space-y-1 animate-fade-in-up">
             {navItems.map((item) => (
               <div key={item.label}>
-                <button
-                  onClick={() => item.submenu && toggleDropdown(item.label)}
-                  className="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#003DA5] rounded-lg transition-colors flex items-center justify-between"
-                >
-                  {item.label}
-                  {item.submenu && (
+                {item.submenu ? (
+                  <button
+                    onClick={() => toggleDropdown(item.label)}
+                    className="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-[#003DA5] rounded-lg transition-colors flex items-center justify-between"
+                  >
+                    {item.label}
                     <ChevronDown
                       size={16}
                       className={`transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`}
                     />
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block px-4 py-2 text-gray-700 hover:text-[#003DA5] rounded-lg hover:bg-blue-50 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
 
                 {/* Mobile Dropdown */}
                 {item.submenu && openDropdown === item.label && (
