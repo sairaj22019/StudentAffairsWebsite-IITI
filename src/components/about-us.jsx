@@ -36,14 +36,7 @@ export default function AboutUs() {
         <div className="h-1 w-12 bg-gradient-to-r from-[#003DA5] to-blue-400 mb-4"></div>
 
         <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
-          The Student Affairs Division at IIT Indore is dedicated to fostering a vibrant and inclusive campus community.
-          We support the holistic development of our students through various programs, clubs, and initiatives that
-          complement their academic journey.
-        </p>
-
-        <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-          With over 50 student clubs spanning technical, cultural, sports, and social domains, we ensure every student
-          finds their community and contributes to the vibrant tapestry of campus life at IIT Indore.
+          When it comes to studying at an IIT, people have the misconception that IITians are studious dweebs, who can't break out of the humdrum monotony of their schedules; trapped in a perpetual loop of assignments, quizzes, vivas and semester examinations. With a panoply of activities organised under the banner of cultural and technical events, to a multitude of clubs that help the students follow their interests, the students gain an impressive repertoire of skills, apart from academic excellence. Whether it be the performance at inter-IITs, at annual TvsMs, or international competitions, the students at IITI have consistently shone with full brilliance. With a close-knit community of more than 1800 students, students here form strong and lasting friendships for life.
         </p>
       </div>
     </section>
