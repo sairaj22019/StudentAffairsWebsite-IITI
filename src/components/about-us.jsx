@@ -33,7 +33,7 @@ export default function AboutUs() {
         className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
         <h2 className="text-2xl md:text-3xl font-bold text-[#003DA5] mb-2">About Student Affairs</h2>
-        <div className="h-1 w-12 bg-gradient-to-r from-[#003DA5] to-blue-400 mb-4"></div>
+        <div className="h-[2px] w-24 bg-gradient-to-r from-[#003DA5] to-blue-400 mb-4"></div>
 
         <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
           When it comes to studying at an IIT, people have the misconception that IITians are studious dweebs, who can't break out of the humdrum monotony of their schedules; trapped in a perpetual loop of assignments, quizzes, vivas and semester examinations. With a panoply of activities organised under the banner of cultural and technical events, to a multitude of clubs that help the students follow their interests, the students gain an impressive repertoire of skills, apart from academic excellence. Whether it be the performance at inter-IITs, at annual TvsMs, or international competitions, the students at IITI have consistently shone with full brilliance. With a close-knit community of more than 1800 students, students here form strong and lasting friendships for life.

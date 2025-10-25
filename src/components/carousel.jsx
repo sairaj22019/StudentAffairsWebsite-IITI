@@ -12,10 +12,10 @@ export default function Carousel() {
       id: 1,
       image: "/img1.jpeg",
     },
-    {
-      id: 2,
-      image: "/img2.jpg",
-    },
+    // {
+    //   id: 2,
+    //   image: "/img2.jpg",
+    // },
     {
       id: 3,
       image: "/img2.jpg",
@@ -99,13 +99,13 @@ export default function Carousel() {
       {/* Navigation Buttons */}
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm group"
+        className="absolute left-3 top-1/2 cursor-pointer -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm group"
       >
         <ChevronLeft size={20} className="group-hover:scale-110 transition-transform" />
       </button>
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm group"
+        className="absolute right-3 top-1/2 cursor-pointer -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm group"
       >
         <ChevronRight size={20} className="group-hover:scale-110 transition-transform" />
       </button>
